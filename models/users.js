@@ -50,6 +50,14 @@ const schema = new mongoose.Schema({
   role: {
     type: Number,
     default: UserRole.USER
+  },
+  firstname: {
+    type: String,
+    required: [true, '輸入姓氏']
+  },
+  lastname: {
+    type: String,
+    required: [true, '輸入名稱']
   }
 }, { versionKey: false })
 

@@ -99,7 +99,9 @@ export const getProfile = (req, res) => {
         account: req.user.account,
         email: req.user.email,
         role: req.user.role,
-        cart: req.user.cart.reduce((total, current) => total + current.quantity, 0)
+        cart: req.user.cart.reduce((total, current) => total + current.quantity, 0),
+        firstname: req.user.firstname,
+        lastname: req.user.lastname
       }
     })
   } catch (error) {
